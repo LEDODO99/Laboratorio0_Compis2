@@ -18,7 +18,7 @@ varType : 'int'
 	| structDeclaration
 	| 'void'
 	;
-methodDeclaration : methodType ID '{' (parameter)* '}' block ;
+methodDeclaration : methodType ID '(' (parameter)* ')' block ;
 methodType : 'int'
 	| 'char'
 	| 'boolean'

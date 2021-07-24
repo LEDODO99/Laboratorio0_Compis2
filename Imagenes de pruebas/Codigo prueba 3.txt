@@ -1,0 +1,9 @@
+class Program { 
+	int numero;
+	int metodoprueba () {
+		if (numero == 4) {
+			int valor;
+			return valor + 984;
+		}
+	}
+}

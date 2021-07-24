@@ -43,7 +43,7 @@ public class DECAFParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'class'", "'Program'", "'{'", "'}'", "';'", "'['", "']'", "'struct'", 
-			"'int'", "'char'", "'boolean'", "'void'", "'if'", "'('", "')'", "'else'", 
+			"'int'", "'char'", "'boolean'", "'void'", "'('", "')'", "'if'", "'else'", 
 			"'while'", "'return'", "'='", "'.'", "'-'", "'!'", "'+'", "'*'", "'/'", 
 			"'%'", "'<'", "'>'", "'<='", "'>='", "'=='", "'!='", "'&&'", "'||'", 
 			"'''", "'true'", "'false'"
@@ -492,7 +492,7 @@ public class DECAFParser extends Parser {
 			setState(98);
 			match(ID);
 			setState(99);
-			match(T__2);
+			match(T__12);
 			setState(103);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -508,7 +508,7 @@ public class DECAFParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(106);
-			match(T__3);
+			match(T__13);
 			setState(107);
 			block();
 			}
@@ -728,7 +728,7 @@ public class DECAFParser extends Parser {
 			setState(133);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__4) | (1L << T__12) | (1L << T__16) | (1L << T__17) | (1L << T__20) | (1L << T__21) | (1L << T__34) | (1L << T__35) | (1L << T__36) | (1L << ID) | (1L << NUM))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__4) | (1L << T__14) | (1L << T__16) | (1L << T__17) | (1L << T__20) | (1L << T__21) | (1L << T__34) | (1L << T__35) | (1L << T__36) | (1L << ID) | (1L << NUM))) != 0)) {
 				{
 				{
 				setState(130);
@@ -796,13 +796,13 @@ public class DECAFParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(138);
-				match(T__12);
+				match(T__14);
 				setState(139);
-				match(T__13);
+				match(T__12);
 				setState(140);
 				expression(0);
 				setState(141);
-				match(T__14);
+				match(T__13);
 				setState(142);
 				block();
 				setState(145);
@@ -825,11 +825,11 @@ public class DECAFParser extends Parser {
 				setState(147);
 				match(T__16);
 				setState(148);
-				match(T__13);
+				match(T__12);
 				setState(149);
 				expression(0);
 				setState(150);
-				match(T__14);
+				match(T__13);
 				setState(151);
 				block();
 				}
@@ -1151,7 +1151,7 @@ public class DECAFParser extends Parser {
 			setState(207);
 			match(ID);
 			setState(208);
-			match(T__13);
+			match(T__12);
 			setState(212);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -1167,7 +1167,7 @@ public class DECAFParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(215);
-			match(T__14);
+			match(T__13);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1727,19 +1727,19 @@ public class DECAFParser extends Parser {
 		"\2UV\3\2\2\2VX\3\2\2\2WU\3\2\2\2XY\7\6\2\2Y\t\3\2\2\2Zb\7\13\2\2[b\7\f"+
 		"\2\2\\b\7\r\2\2]^\7\n\2\2^b\7(\2\2_b\5\b\5\2`b\7\16\2\2aZ\3\2\2\2a[\3"+
 		"\2\2\2a\\\3\2\2\2a]\3\2\2\2a_\3\2\2\2a`\3\2\2\2b\13\3\2\2\2cd\5\16\b\2"+
-		"de\7(\2\2ei\7\5\2\2fh\5\20\t\2gf\3\2\2\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2\2"+
-		"jl\3\2\2\2ki\3\2\2\2lm\7\6\2\2mn\5\24\13\2n\r\3\2\2\2op\t\2\2\2p\17\3"+
-		"\2\2\2qr\5\22\n\2rs\7(\2\2sz\3\2\2\2tu\5\22\n\2uv\7(\2\2vw\7\b\2\2wx\7"+
-		"\t\2\2xz\3\2\2\2yq\3\2\2\2yt\3\2\2\2z\21\3\2\2\2{|\t\3\2\2|\23\3\2\2\2"+
-		"}\u0081\7\5\2\2~\u0080\5\6\4\2\177~\3\2\2\2\u0080\u0083\3\2\2\2\u0081"+
+		"de\7(\2\2ei\7\17\2\2fh\5\20\t\2gf\3\2\2\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2"+
+		"\2jl\3\2\2\2ki\3\2\2\2lm\7\20\2\2mn\5\24\13\2n\r\3\2\2\2op\t\2\2\2p\17"+
+		"\3\2\2\2qr\5\22\n\2rs\7(\2\2sz\3\2\2\2tu\5\22\n\2uv\7(\2\2vw\7\b\2\2w"+
+		"x\7\t\2\2xz\3\2\2\2yq\3\2\2\2yt\3\2\2\2z\21\3\2\2\2{|\t\3\2\2|\23\3\2"+
+		"\2\2}\u0081\7\5\2\2~\u0080\5\6\4\2\177~\3\2\2\2\u0080\u0083\3\2\2\2\u0081"+
 		"\177\3\2\2\2\u0081\u0082\3\2\2\2\u0082\u0087\3\2\2\2\u0083\u0081\3\2\2"+
 		"\2\u0084\u0086\5\26\f\2\u0085\u0084\3\2\2\2\u0086\u0089\3\2\2\2\u0087"+
 		"\u0085\3\2\2\2\u0087\u0088\3\2\2\2\u0088\u008a\3\2\2\2\u0089\u0087\3\2"+
-		"\2\2\u008a\u008b\7\6\2\2\u008b\25\3\2\2\2\u008c\u008d\7\17\2\2\u008d\u008e"+
-		"\7\20\2\2\u008e\u008f\5\32\16\2\u008f\u0090\7\21\2\2\u0090\u0093\5\24"+
+		"\2\2\u008a\u008b\7\6\2\2\u008b\25\3\2\2\2\u008c\u008d\7\21\2\2\u008d\u008e"+
+		"\7\17\2\2\u008e\u008f\5\32\16\2\u008f\u0090\7\20\2\2\u0090\u0093\5\24"+
 		"\13\2\u0091\u0092\7\22\2\2\u0092\u0094\5\24\13\2\u0093\u0091\3\2\2\2\u0093"+
 		"\u0094\3\2\2\2\u0094\u00ad\3\2\2\2\u0095\u0096\7\23\2\2\u0096\u0097\7"+
-		"\20\2\2\u0097\u0098\5\32\16\2\u0098\u0099\7\21\2\2\u0099\u009a\5\24\13"+
+		"\17\2\2\u0097\u0098\5\32\16\2\u0098\u0099\7\20\2\2\u0099\u009a\5\24\13"+
 		"\2\u009a\u00ad\3\2\2\2\u009b\u009d\7\24\2\2\u009c\u009e\5\32\16\2\u009d"+
 		"\u009c\3\2\2\2\u009d\u009e\3\2\2\2\u009e\u009f\3\2\2\2\u009f\u00ad\7\7"+
 		"\2\2\u00a0\u00a1\5\34\17\2\u00a1\u00a2\7\7\2\2\u00a2\u00ad\3\2\2\2\u00a3"+
@@ -1760,10 +1760,10 @@ public class DECAFParser extends Parser {
 		"\u00c2\3\2\2\2\u00c7\u00ce\3\2\2\2\u00c8\u00c9\f\6\2\2\u00c9\u00ca\5 "+
 		"\21\2\u00ca\u00cb\5\32\16\7\u00cb\u00cd\3\2\2\2\u00cc\u00c8\3\2\2\2\u00cd"+
 		"\u00d0\3\2\2\2\u00ce\u00cc\3\2\2\2\u00ce\u00cf\3\2\2\2\u00cf\33\3\2\2"+
-		"\2\u00d0\u00ce\3\2\2\2\u00d1\u00d2\7(\2\2\u00d2\u00d6\7\20\2\2\u00d3\u00d5"+
+		"\2\u00d0\u00ce\3\2\2\2\u00d1\u00d2\7(\2\2\u00d2\u00d6\7\17\2\2\u00d3\u00d5"+
 		"\5\36\20\2\u00d4\u00d3\3\2\2\2\u00d5\u00d8\3\2\2\2\u00d6\u00d4\3\2\2\2"+
 		"\u00d6\u00d7\3\2\2\2\u00d7\u00d9\3\2\2\2\u00d8\u00d6\3\2\2\2\u00d9\u00da"+
-		"\7\21\2\2\u00da\35\3\2\2\2\u00db\u00dc\5\32\16\2\u00dc\37\3\2\2\2\u00dd"+
+		"\7\20\2\2\u00da\35\3\2\2\2\u00db\u00dc\5\32\16\2\u00dc\37\3\2\2\2\u00dd"+
 		"\u00e2\5\"\22\2\u00de\u00e2\5$\23\2\u00df\u00e2\5&\24\2\u00e0\u00e2\5"+
 		"(\25\2\u00e1\u00dd\3\2\2\2\u00e1\u00de\3\2\2\2\u00e1\u00df\3\2\2\2\u00e1"+
 		"\u00e0\3\2\2\2\u00e2!\3\2\2\2\u00e3\u00e4\t\4\2\2\u00e4#\3\2\2\2\u00e5"+
