@@ -1,6 +1,6 @@
 class Program { 
 	int numero;
-	int metodoprueba () {
+	void metodoprueba () {
 		if (numero == 4) {
 			int valor;
 			return valor + 984;
