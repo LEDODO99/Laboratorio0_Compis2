@@ -298,6 +298,18 @@ public class DECAFBaseListener implements DECAFListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBool_literal(DECAFParser.Bool_literalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignment(DECAFParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignment(DECAFParser.AssignmentContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

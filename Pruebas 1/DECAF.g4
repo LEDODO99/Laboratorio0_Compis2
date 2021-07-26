@@ -1,6 +1,6 @@
 grammar DECAF;
 
-ID : [a-z] ([a-z]|[0-9])* ;
+ID : ([a-z]|[A-Z]) ([a-z]|[A-Z]|[0-9])* ;
 NUM: [0-9]+;
 CHAR: [a-z];
 
@@ -10,7 +10,7 @@ declaration: structDeclaration
 	| methodDeclaration 
 	;
 varDeclaration : varType ID ';' | varType ID '[' NUM ']' ';' ;
-structDeclaration : 'struct' ID '{' (varDeclaration)* '}' ;
+structDeclaration : 'struct' ID '{' (varDeclaration)* '}' ';' ;
 varType : 'int'
 	| 'char'
 	| 'boolean'
@@ -18,7 +18,7 @@ varType : 'int'
 	| structDeclaration
 	| 'void'
 	;
-methodDeclaration : methodType ID '(' (parameter)* ')' block ;
+methodDeclaration : methodType ID '(' ('void'|(parameter)*) ')' block ;
 methodType : 'int'
 	| 'char'
 	| 'boolean'
@@ -37,10 +37,10 @@ statement : 'if' '(' expression ')' block ('else' block)?
 	| 'return' (expression)? ';'
 	| methodCall ';'
 	| block
-	| location '=' expression
+	| assignment
 	| (expression)? ';'
 	;
-location : (ID | ID '[' expression '[') ('.' location)? ;
+location : (ID | ID '[' expression ']') ('.' location)? ;
 expression : location 
 	| methodCall
 	| literal
@@ -67,3 +67,4 @@ literal : int_literal
 int_literal : NUM ;
 char_literal :  '\'' CHAR '\'' ;
 bool_literal : 'true' | 'false' ;
+assignment : location '=' expression ;

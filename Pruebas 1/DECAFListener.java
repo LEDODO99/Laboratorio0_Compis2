@@ -246,4 +246,14 @@ public interface DECAFListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBool_literal(DECAFParser.Bool_literalContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DECAFParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignment(DECAFParser.AssignmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DECAFParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignment(DECAFParser.AssignmentContext ctx);
 }
