@@ -3,6 +3,7 @@ grammar DECAF;
 ID : ([a-z]|[A-Z]) ([a-z]|[A-Z]|[0-9])* ;
 NUM: [0-9]+;
 CHAR: [a-z];
+WS : [ \t\r\n\f]+  ->channel(HIDDEN);
 
 program: 'class' 'Program' '{' (declaration)* '}' ;
 declaration: structDeclaration
